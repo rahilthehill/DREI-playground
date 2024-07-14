@@ -117,10 +117,10 @@ export default function Experience()
         
         
   <PivotControls depthTest={false} anchor={[0,13,0]} disableScaling={true} disableRotations={true} >
-  <Cloud seed={1} scale={0.5} volume={6} color="ivory" fade={10} position-y={10} />
+  <Cloud seed={1} scale={0.5} volume={6} color="pink" fade={10} position-y={10} />
   
-  <Cloud seed={453} scale={0.5} volume={6} color="ivory" fade={10} position-y={8}position-x={-5} />
-  <Cloud seed={2304} scale={0.5} volume={6} color="ivory" fade={10} position-y={7} position-x={4}/>
+  <Cloud seed={453} scale={0.5} volume={6} color="pink" fade={10} position-y={8}position-x={-5} />
+  <Cloud seed={2304} scale={0.5} volume={6} color="pink" fade={10} position-y={7} position-x={4}/>
   </PivotControls>
   </group>
     </>
