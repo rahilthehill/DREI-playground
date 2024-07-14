@@ -1,9 +1,28 @@
 import {Cloud,Fisheye ,MeshReflectorMaterial,MeshWobbleMaterial,Text, Html, PivotControls, TransformControls, OrbitControls, Float } from "@react-three/drei"
 import { useRef } from "react"
+import {button, useControls} from 'leva'
+import {Perf} from 'r3f-perf'
 
 export default function Experience()
 {
+    const {Statistics} = useControls({
+        Statistics: false
+    })
+
+    const {controls} = useControls('Controls',{
+        controls: 'Work in progress',
+    }
+    )
     
+    const {position, color} = useControls('Movement',{
+        position: {value: [0,0,0], step: 0.1},
+        color: 'blue'
+    })
+
+    const {graphics} = useControls('Graphics',{
+        graphics: 'Work in progress',
+    }
+    )
 
     const cubeRef = useRef()
     const sphereRef = useRef()
@@ -12,15 +31,17 @@ export default function Experience()
 
     return <>
         
+        {Statistics? <Perf position="top-left" />:null}
+        
         <OrbitControls makeDefault />
         
 
-        <directionalLight position={ [ 1, 2, 3 ] } intensity={ 4.5 } />
+        <directionalLight position={ [ 0,5, 0 ] } intensity={ 4.5 } />
         <ambientLight intensity={ 1.5 } />
 
         <group position-y={-3}>
 
-    <PivotControls 
+   <PivotControls 
     anchor={[0,0,0]} 
     depthTest={false}
     lineWidth={4}
@@ -40,7 +61,7 @@ export default function Experience()
             >This is a god damn sphere 👍 
             </Html> */}
         </mesh>
-        </PivotControls>
+     </PivotControls>
     
         
         <PivotControls 

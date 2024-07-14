@@ -4,10 +4,14 @@ import { Canvas } from '@react-three/fiber'
 import Experience from './Experience.jsx'
 import {AsciiRenderer, PerspectiveCamera} from "@react-three/drei"
 import { positionGeometry } from 'three/examples/jsm/nodes/Nodes.js'
+import {StrictMode} from 'react'
+import { Leva } from 'leva'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 root.render(
+    <StrictMode>
+    <Leva collapsed={true}/>
     <Canvas
         camera={  {
             
@@ -23,4 +27,5 @@ root.render(
           {/* <AsciiRenderer/> */}
         <Experience />
     </Canvas>
+    </StrictMode>
 )
