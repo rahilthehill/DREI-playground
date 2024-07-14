@@ -15,8 +15,7 @@ export default function Experience()
     )
     
     const {position, color} = useControls('Movement',{
-        position: {value: [0,0,0], step: 0.1},
-        color: 'blue'
+        position: 'work in progress'
     })
 
     const {graphics} = useControls('Graphics',{
