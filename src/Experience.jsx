@@ -67,7 +67,7 @@ export default function Experience()
             <planeGeometry />
             <meshStandardMaterial color="greenyellow" />
             <MeshReflectorMaterial
-                resolution={4096}
+                resolution={1028}
                 blur={[1000,1000]}
                 mixBlur={1}
                 mirror={0.75}
